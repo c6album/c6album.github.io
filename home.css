@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* scroll-behavior: smooth; */
+    font-family: 'Poppins', sans-serif;
+}
+
+span{
+    font-family: 'Bungee Inline', cursive;
+}
+
+body {
+    background-image: url('picture/study.jpg') #333;
+    background-blend-mode: hard-light;
+    background-position: center;
+    /* background-size: cover; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    right: 100px;
+    bottom: 80px;
+    background-image: url('picture/study.jpg');
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 0 0 0 100px rgba(0, 0, 0, .1);
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 10em;
+    line-height: 0.7em;
+    color: #333;
+    margin-top: -50px;
+}
+
+.container h2 span {
+    display: block;
+    font-weight: 300;
+    letter-spacing: 6px;
+    font-size: 0.2em;
+}
+
+.countdown {
+    display: flex;
+    margin-top: 50px;
+}
+
+.countdown div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.countdown div::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #ff0;
+    color: #333;
+    font-size: 0.35em;
+    line-height: 35px;
+    font-weight: 300;
+}
+
+.countdown #day::before {
+    content: "Days";
+}
+
+.countdown #hour::before {
+    content: "hours";
+}
+
+.countdown #minute::before {
+    content: "minute";
+}
+
+.countdown #second::before {
+    content: "second";
+}
+@media only screen and (max-width: 768px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-image: url('picture/study.jpg') #333;
+        background-blend-mode: hard-light;
+        background-position: center;
+        /* background-size: cover; */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* top: 80px;
+        left: 100px;
+        right: 100px;
+        bottom: 80px; */
+        /* background-image: url('picture/study.jpg'); */
+        width: 100%;
+        height: 30%;
+        background: rgba(255, 255, 255, 0.5);
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 50%;
+        /* box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 0 0 0 100px rgba(0, 0, 0, .1); */
+        box-shadow: none;
+    }
+    .container h2 {
+        text-align: center;
+        font-size: 2em;
+        line-height: .4em;
+        margin: 20px;
+    }
+    .container h2 span {
+        display: block;
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-size: 0.3em;
+        margin-bottom: 20px;
+    }
+    .countdown {
+        display: flex;
+        margin-top: 20px;
+    }
+    .countdown div {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        line-height: 40px;
+        text-align: center;
+        background: #333;
+        color: #fff;
+        margin: 0 15px;
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .countdown div::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: dodgerblue;
+        color: rgb(0, 0, 0);
+        font-size: 0.50em;
+        line-height: 25px;
+        font-weight: 300;
+    }
+}
+
+
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Top and Bottom borders come in */
+div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Top border go down and Left border appears */
+div.topLeftBorders a:before
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 2px;
+    height: 0px;
+    background: #FFF;
+    content: "";
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+div.topLeftBorders a:after
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+div.topLeftBorders a:hover:before
+{
+    height: 100%;
+}
+
+div.topLeftBorders a:hover:after
+{
+    opacity: 0;
+    top: 100%;
+}
+
+/* Circle behind */
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #0277bd;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+/* Brackets go out */
+div.brackets a:before, div.brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 35px;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+div.brackets a:before
+{
+    content: '(';
+    left: 0px;
+    transform: translateX(10px);
+}
+
+div.brackets a:after
+{
+    content: ')';
+    right: 0px;
+    transform: translateX(-10px);
+}
+
+div.brackets a:hover:before, div.brackets a:hover:after
+{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/* menu */
+body {
+    background: #f9f8fd;
+    font-family: 'Lexend Exa', sans-serif;
+}
+nav {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    border: 2px solid #ebecf1;
+    border-radius: 30px;
+    animation: slide-in 1s ease-out;
+}
+ul {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0 30px;
+    list-style-type: none;
+}
+ul li:not(:last-child) {
+    margin-right: 40px;
+}
+ul li {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background 0.2s;
+}
+ul li a {
+    color: #2375d8;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    margin: 12px -12px;
+    padding: 0;
+    background: #ffa91b;
+    border: 2px solid #f7c833;
+    border-right: 2px solid #f89329;
+    border-bottom: 2px solid #f89329;
+    border-radius: 5px;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+ul li ul li {
+    margin: -2px 0 0 -2px;
+    width: calc(100% - 20px);
+    line-height: 1.7;
+}
+ul li ul li a {
+    color: #2375d8;
+}
+ul li:hover {
+    background: #ec4138;
+    border: 2px solid #f05749;
+    border-right: 2px solid #e02a21;
+    border-bottom: 2px solid #e02a21;
+}
+ul li:hover a {
+    color: #f9f8fd;
+}
+ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 0px 3px 5px 2px #ebecf1;
+}
+ul li:hover ul li a {
+    color: #f9f8fd;
+}
+@keyframes slide-in {
+    0% {
+        top: -50px;
+   }
+    40% {
+        top: 20px;
+   }
+    70% {
+        top: 10px;
+   }
+    100% {
+        top: 15px;
+   }
+}
